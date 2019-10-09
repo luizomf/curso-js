@@ -40,6 +40,10 @@ module.exports = {
         "space-before-blocks": [
             "error",
             "always"
-        ]
+        ],
+        "comma-spacing": [
+            "error", {
+                "after": true
+            }]
     }
 };
