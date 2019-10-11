@@ -45,6 +45,46 @@ module.exports = {
             "error", {
                 "after": true
             }
+        ],
+        "space-infix-ops": [
+            "error",
+            {
+                "int32Hint": false
+            }
+        ],
+        "key-spacing": [
+            "error",
+            {
+                "afterColon": true
+            }
+        ],
+        "no-trailing-spaces": [
+            "error",
+            {
+                "skipBlankLines": false,
+                // "skipBlankLines": true,
+                "ignoreComments": false,
+                // "ignoreComments": true
+            }
+        ],
+        "space-before-function-paren": [
+            "error",
+            {
+                "anonymous": "never",
+                "named": "never",
+                "asyncArrow": "never"
+            }
+        ],
+        "arrow-spacing": [
+            "error",
+            {
+                "before": true,
+                "after": true
+            }
+        ],
+        "space-in-parens": [
+            "error",
+            "never"
         ]
     }
 };
