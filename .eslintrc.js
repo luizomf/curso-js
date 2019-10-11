@@ -44,6 +44,7 @@ module.exports = {
         "comma-spacing": [
             "error", {
                 "after": true
-            }]
+            }
+        ]
     }
 };
