@@ -1,3 +1,4 @@
-const pessoa = nome => nome;
-const valor = pessoa('Luiz Otávio');
-console.log(valor);
+const conta = (...args) => {
+  console.log(args);
+};
+conta('+', 1, 20, 30, 40, 50);
