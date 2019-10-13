@@ -85,6 +85,10 @@ module.exports = {
         "space-in-parens": [
             "error",
             "never"
+        ],
+        "object-curly-spacing": [
+            "error",
+            "always"
         ]
     }
 };
