@@ -14,6 +14,7 @@ let anoNascimento;
 indiceMassaCorporal = peso / (alturaEmM * alturaEmM);
 anoNascimento = 2019 - idade;
 
+
 // template strings
 
 console.log(`${nome} ${sobrenome} tem ${idade} anos, pesa ${peso} kg`);
