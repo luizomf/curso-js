@@ -5,3 +5,5 @@ Javascript do básico ao avançado (https://www.udemy.com/course/curso-de-javasc
 
 As aulas não estão na ordem de criação e não na ordem criada automaticamente
 pela plataforma do curso.
+
+Bons estudos.
