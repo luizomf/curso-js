@@ -1,3 +1,4 @@
 tests
 .vscode
 node-modules
+.env
