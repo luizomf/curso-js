@@ -1,2 +1,3 @@
 tests
 node_modules
+.env
