@@ -1,5 +1,5 @@
 {
-  "name": "aula16",
+  "name": "aula17",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -16,10 +16,12 @@
     "connect-mongo": "^3.1.0",
     "core-js": "^3.3.2",
     "css-loader": "^3.2.0",
+    "csurf": "^1.10.0",
     "dotenv": "^8.2.0",
     "ejs": "^2.7.1",
     "express": "^4.17.1",
     "express-session": "^1.17.0",
+    "helmet": "^3.21.2",
     "mongoose": "^5.7.7",
     "regenerator-runtime": "^0.13.3",
     "style-loader": "^1.0.0"
