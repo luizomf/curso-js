@@ -90,6 +90,7 @@ module.exports = {
         "object-curly-spacing": [
             "error",
             "always"
-        ]
+        ],
+        "require-atomic-updates": "off"
     }
 };
