@@ -16,7 +16,9 @@ module.exports = {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": [],
+    "plugins": [
+        "react"
+    ],
     "rules": {
         "indent": [
             "error",
