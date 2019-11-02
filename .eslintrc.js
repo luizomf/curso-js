@@ -1,4 +1,8 @@
+/*
+babel-eslint, eslint, eslint-plugin-react
+*/
 module.exports = {
+    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "es6": true,
@@ -20,6 +24,17 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "max-len": [
+            "error", 
+            { "code": 80, "ignoreStrings": true, "ignoreUrls": true }
+        ],
+        "no-unused-vars": [
+            "error",
+            { 
+                "varsIgnorePattern": "React" 
+                // "varsIgnorePattern": "[Ii]gnored[vV]ar|[R]eact" 
+            }
+        ],
         "indent": [
             "error",
             2
@@ -29,8 +44,8 @@ module.exports = {
             "never"
         ],
         "keyword-spacing": [
-            "error", 
-            { 
+            "error",
+            {
                 "after": true,
                 "before": true
             }
