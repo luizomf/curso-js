@@ -24,14 +24,17 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "prefer-const": [
+            "error"
+        ],
         "max-len": [
-            "error", 
+            "error",
             { "code": 80, "ignoreStrings": true, "ignoreUrls": true }
         ],
         "no-unused-vars": [
             "error",
-            { 
-                "varsIgnorePattern": "React" 
+            {
+                "varsIgnorePattern": "React"
                 // "varsIgnorePattern": "[Ii]gnored[vV]ar|[R]eact" 
             }
         ],
