@@ -1,5 +1,5 @@
 /*
-babel-eslint, eslint eslint-plugin-react
+npm i --save-dev babel-eslint eslint eslint-plugin-react
 */
 module.exports = {
     "parser": "babel-eslint",
@@ -24,6 +24,24 @@ module.exports = {
         "react"
     ],
     "rules": {
+        "padding-line-between-statements": [
+            "error",
+            { blankLine: "always", prev: "*", next: ["block-like", "block"] }
+        ],
+        "lines-between-class-members": ["error", "always"],
+        "newline-per-chained-call": [
+            "error", 
+            { 
+                "ignoreChainWithDepth": 2 
+            }
+        ],
+        "comma-dangle": ["error", {
+            "arrays": "always",
+            "objects": "always",
+            "imports": "never",
+            "exports": "never",
+            "functions": "never"
+        }],
         "prefer-const": [
             "error"
         ],
