@@ -1,7 +1,4 @@
-import dotenv from 'dotenv';
 import { resolve } from 'path';
-
-dotenv.config();
 
 import './database';
 
