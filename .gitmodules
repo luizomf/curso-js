@@ -1,6 +1,0 @@
-[submodule "api_rest/repo-api"]
-	path = api_rest/repo-api
-	url = curso.otaviomiranda.com.br:repo-api
-[submodule "api_rest/api"]
-	path = api_rest/api
-	url = curso.otaviomiranda.com.br:repo-api
