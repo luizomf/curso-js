@@ -2,6 +2,12 @@ import jwt from 'jsonwebtoken';
 import User from '../models/User';
 
 class TokenController {
+  index(req, res) {
+    res.json({
+      valid: true
+    });
+  }
+
   async store(req, res) {
     const { email = '', password = '' } = req.body;
 
@@ -30,7 +36,7 @@ class TokenController {
       expiresIn: process.env.TOKEN_EXPIRATION,
     });
 
-    return res.json({ token });
+    return res.json({ token, id, email });
   }
 }
 
