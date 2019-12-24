@@ -14,6 +14,8 @@ export default class Login {
     this.form.addEventListener('submit', e => {
       e.preventDefault();
       this.validate(e);
+      // console.log(e.target.querySelector('input[name="email"]'))
+      
     });
   }
 
@@ -35,4 +37,9 @@ export default class Login {
 
     if(!error) el.submit();
   }
+
+
+  
 }
+
+

@@ -9,10 +9,11 @@
       <h1 class="text-center">Agenda</h1>
       <p class="text-center lead">Seus contatos estão abaixo</p>
 
-      <%- include('includes/messages') %>
+     
 
       <% if(contatos.length > 0) { %>
       <div class="responsive-table">
+         <div class='mensagem-classe' name='teste'>  <%- include('includes/messages') %> </div>
         <table class="table my-3">
           <% contatos.forEach(contato => { %>
           <tr>
@@ -20,8 +21,8 @@
             <td><%= contato.sobrenome %></td>
             <td><%= contato.telefone %></td>
             <td><%= contato.email %></td>
-            <td><a href="/contato/index/<%= contato._id %>">Editar</a></td>
-            <td><a class="text-danger" href="/contato/delete/<%= contato._id %>">Excluir</a></td>
+            <td><a href="/contato/index/<%= contato._id %>"> <button> Editar </button type='submit'></a></td>
+            <td><a class="text-danger" href="/contato/delete/<%= contato._id %>"> <button type ='submit'> Excluir  </button> </a></td>
           </tr>
           <% }); %>
         </table>
