@@ -51,7 +51,7 @@ export default function Aluno({ match }) {
         const status = get(err, 'response.status', 0);
         const errors = get(err, 'response.data.errors', []);
 
-        if (status === 400) errors.map(error => toast.error(error));
+        if (status === 400) errors.map((error) => toast.error(error));
         history.push('/');
       }
     }
@@ -59,7 +59,7 @@ export default function Aluno({ match }) {
     getData();
   }, [id]);
 
-  const handleSubmit = async e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     let formErrors = false;
 
@@ -128,7 +128,7 @@ export default function Aluno({ match }) {
       const errors = get(data, 'errors', []);
 
       if (errors.length > 0) {
-        errors.map(error => toast.error(error));
+        errors.map((error) => toast.error(error));
       } else {
         toast.error('Erro desconhecido');
       }
@@ -156,37 +156,37 @@ export default function Aluno({ match }) {
         <input
           type="text"
           value={nome}
-          onChange={e => setNome(e.target.value)}
+          onChange={(e) => setNome(e.target.value)}
           placeholder="Nome"
         />
         <input
           type="text"
           value={sobrenome}
-          onChange={e => setSobrenome(e.target.value)}
+          onChange={(e) => setSobrenome(e.target.value)}
           placeholder="Sobrenome"
         />
         <input
           type="email"
           value={email}
-          onChange={e => setEmail(e.target.value)}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Email"
         />
         <input
           type="number"
           value={idade}
-          onChange={e => setIdade(e.target.value)}
+          onChange={(e) => setIdade(e.target.value)}
           placeholder="Idade"
         />
         <input
           type="text"
           value={peso}
-          onChange={e => setPeso(e.target.value)}
+          onChange={(e) => setPeso(e.target.value)}
           placeholder="Peso"
         />
         <input
           type="text"
           value={altura}
-          onChange={e => setAltura(e.target.value)}
+          onChange={(e) => setAltura(e.target.value)}
           placeholder="Altura"
         />
 
