@@ -13,24 +13,24 @@
   "license": "ISC",
   "dependencies": {
     "connect-flash": "^0.1.1",
-    "connect-mongo": "^3.1.0",
-    "core-js": "^3.3.2",
-    "css-loader": "^3.2.0",
+    "connect-mongo": "^3.2.0",
+    "core-js": "^3.6.5",
+    "css-loader": "^3.5.3",
     "dotenv": "^8.2.0",
-    "ejs": "^2.7.1",
+    "ejs": "^3.1.2",
     "express": "^4.17.1",
-    "express-session": "^1.17.0",
-    "mongoose": "^5.7.7",
-    "regenerator-runtime": "^0.13.3",
-    "style-loader": "^1.0.0"
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.13",
+    "regenerator-runtime": "^0.13.5",
+    "style-loader": "^1.2.1"
   },
   "devDependencies": {
-    "nodemon": "^1.19.4",
-    "@babel/cli": "^7.6.4",
-    "@babel/core": "^7.6.4",
-    "@babel/preset-env": "^7.6.3",
-    "babel-loader": "^8.0.6",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.9"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "babel-loader": "^8.1.0",
+    "nodemon": "^2.0.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
   }
 }
