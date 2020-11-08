@@ -35,7 +35,7 @@ export default function Fotos({ match }) {
     getData();
   }, [id]);
 
-  const handleChange = async e => {
+  const handleChange = async (e) => {
     const file = e.target.files[0];
     const fotoURL = URL.createObjectURL(file);
 

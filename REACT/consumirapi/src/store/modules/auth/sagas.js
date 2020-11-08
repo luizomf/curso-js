@@ -63,7 +63,7 @@ function* registerRequest({ payload }) {
     }
 
     if (errors.length > 0) {
-      errors.map(error => toast.error(error));
+      errors.map((error) => toast.error(error));
     } else {
       toast.error('Erro desconhecido');
     }

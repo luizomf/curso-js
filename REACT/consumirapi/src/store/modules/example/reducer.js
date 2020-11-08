@@ -4,7 +4,7 @@ const initialState = {
   botaoClicado: false,
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case types.BOTAO_CLICADO_SUCCESS: {
       console.log('Sucesso');

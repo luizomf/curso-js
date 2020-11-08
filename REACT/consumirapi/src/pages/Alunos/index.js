@@ -1,12 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { get } from 'lodash';
-import {
-  FaUserCircle,
-  FaEdit,
-  FaWindowClose,
-  FaExclamation,
-} from 'react-icons/fa';
+import { FaUserCircle, FaEdit, FaWindowClose, FaExclamation } from 'react-icons/fa';
 
 import { toast } from 'react-toastify';
 import { Container } from '../../styles/GlobalStyles';
@@ -30,7 +25,7 @@ export default function Alunos() {
     getData();
   }, []);
 
-  const handleDeleteAsk = e => {
+  const handleDeleteAsk = (e) => {
     e.preventDefault();
     const exclamation = e.currentTarget.nextSibling;
     exclamation.setAttribute('display', 'block');
@@ -72,11 +67,7 @@ export default function Alunos() {
         {alunos.map((aluno, index) => (
           <div key={String(aluno.id)}>
             <ProfilePicture>
-              {get(aluno, 'Fotos[0].url', false) ? (
-                <img src={aluno.Fotos[0].url} alt="" />
-              ) : (
-                <FaUserCircle size={36} />
-              )}
+              {get(aluno, 'Fotos[0].url', false) ? <img src={aluno.Fotos[0].url} alt="" /> : <FaUserCircle size={36} />}
             </ProfilePicture>
 
             <span>{aluno.nome}</span>
@@ -94,7 +85,7 @@ export default function Alunos() {
               size={16}
               display="none"
               cursor="pointer"
-              onClick={e => handleDelete(e, aluno.id, index)}
+              onClick={(e) => handleDelete(e, aluno.id, index)}
             />
           </div>
         ))}

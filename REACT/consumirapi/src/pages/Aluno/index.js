@@ -154,42 +154,12 @@ export default function Aluno({ match }) {
       )}
 
       <Form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={nome}
-          onChange={(e) => setNome(e.target.value)}
-          placeholder="Nome"
-        />
-        <input
-          type="text"
-          value={sobrenome}
-          onChange={(e) => setSobrenome(e.target.value)}
-          placeholder="Sobrenome"
-        />
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-        />
-        <input
-          type="number"
-          value={idade}
-          onChange={(e) => setIdade(e.target.value)}
-          placeholder="Idade"
-        />
-        <input
-          type="text"
-          value={peso}
-          onChange={(e) => setPeso(e.target.value)}
-          placeholder="Peso"
-        />
-        <input
-          type="text"
-          value={altura}
-          onChange={(e) => setAltura(e.target.value)}
-          placeholder="Altura"
-        />
+        <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Nome" />
+        <input type="text" value={sobrenome} onChange={(e) => setSobrenome(e.target.value)} placeholder="Sobrenome" />
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" />
+        <input type="number" value={idade} onChange={(e) => setIdade(e.target.value)} placeholder="Idade" />
+        <input type="text" value={peso} onChange={(e) => setPeso(e.target.value)} placeholder="Peso" />
+        <input type="text" value={altura} onChange={(e) => setAltura(e.target.value)} placeholder="Altura" />
 
         <button type="submit">Enviar</button>
       </Form>

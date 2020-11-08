@@ -11,10 +11,10 @@ import * as actions from '../../store/modules/auth/actions';
 export default function Register() {
   const dispatch = useDispatch();
 
-  const id = useSelector(state => state.auth.user.id);
-  const nomeStored = useSelector(state => state.auth.user.nome);
-  const emailStored = useSelector(state => state.auth.user.email);
-  const isLoading = useSelector(state => state.auth.isLoading);
+  const id = useSelector((state) => state.auth.user.id);
+  const nomeStored = useSelector((state) => state.auth.user.nome);
+  const emailStored = useSelector((state) => state.auth.user.email);
+  const isLoading = useSelector((state) => state.auth.isLoading);
 
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
@@ -61,22 +61,12 @@ export default function Register() {
       <Form onSubmit={handleSubmit}>
         <label htmlFor="nome">
           Nome:
-          <input
-            type="text"
-            value={nome}
-            onChange={e => setNome(e.target.value)}
-            placeholder="Seu nome"
-          />
+          <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} placeholder="Seu nome" />
         </label>
 
         <label htmlFor="email">
           E-mail:
-          <input
-            type="email"
-            value={email}
-            onChange={e => setEmail(e.target.value)}
-            placeholder="Seu e-mail"
-          />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Seu e-mail" />
         </label>
 
         <label htmlFor="password">
@@ -84,7 +74,7 @@ export default function Register() {
           <input
             type="password"
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={(e) => setPassword(e.target.value)}
             placeholder="Sua senha"
           />
         </label>
