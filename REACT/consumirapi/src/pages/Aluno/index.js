@@ -8,13 +8,12 @@ import { FaUserCircle, FaEdit } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 import axios from '../../services/axios';
-import history from '../../services/history';
 import { Container } from '../../styles/GlobalStyles';
 import { Form, ProfilePicture, Title } from './styled';
 import Loading from '../../components/Loading';
 import * as actions from '../../store/modules/auth/actions';
 
-export default function Aluno({ match }) {
+export default function Aluno({ match, history }) {
   const dispatch = useDispatch();
 
   const id = get(match, 'params.id', '');
@@ -57,7 +56,7 @@ export default function Aluno({ match }) {
     }
 
     getData();
-  }, [id]);
+  }, [id, history]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -169,4 +168,5 @@ export default function Aluno({ match }) {
 
 Aluno.propTypes = {
   match: PropTypes.shape({}).isRequired,
+  history: PropTypes.shape([]).isRequired,
 };
