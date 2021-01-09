@@ -4,7 +4,17 @@ function criaCalculadora() {
 
     inicia() {
       this.cliqueBotoes();
+      this.pressionaBackSpace();
       this.pressionaEnter();
+    },
+
+    pressionaBackSpace() {
+      this.display.addEventListener('keydown', e => {
+        if (e.keyCode === 8) {
+          e.preventDefault();
+          this.clearDisplay();
+        }
+      });
     },
 
     pressionaEnter() {
@@ -61,6 +71,8 @@ function criaCalculadora() {
         if(el.classList.contains('btn-eq')) {
           this.realizaConta();
         }
+
+        this.display.focus();
       });
     },
 
