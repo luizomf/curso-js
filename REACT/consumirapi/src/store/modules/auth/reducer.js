@@ -8,7 +8,7 @@ const initialState = {
   isLoading: false,
 };
 
-export default function(state = initialState, action) {
+export default function (state = initialState, action) {
   switch (action.type) {
     case types.LOGIN_SUCCESS: {
       const newState = { ...state };

@@ -14,13 +14,14 @@ export default function Login(props) {
   const dispatch = useDispatch();
 
   const prevPath = get(props, 'location.state.prevPath', '/');
+  const history = get(props, 'history');
 
-  const isLoading = useSelector(state => state.auth.isLoading);
+  const isLoading = useSelector((state) => state.auth.isLoading);
 
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
 
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     let formErrors = false;
 
@@ -36,7 +37,7 @@ export default function Login(props) {
 
     if (formErrors) return;
 
-    dispatch(actions.loginRequest({ email, password, prevPath }));
+    dispatch(actions.loginRequest({ email, password, prevPath, history }));
   };
 
   return (
@@ -46,18 +47,8 @@ export default function Login(props) {
       <h1>Login</h1>
 
       <Form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          placeholder="Seu e-mail"
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={e => setPassword(e.target.value)}
-          placeholder="Sua senha"
-        />
+        <input type="text" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Seu e-mail" />
+        <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Sua senha" />
         <button type="submit">Acessar</button>
       </Form>
     </Container>

@@ -4,7 +4,6 @@ import { get } from 'lodash';
 import * as actions from './actions';
 import * as types from '../types';
 import axios from '../../../services/axios';
-import history from '../../../services/history';
 
 function* loginRequest({ payload }) {
   try {
@@ -15,8 +14,9 @@ function* loginRequest({ payload }) {
 
     axios.defaults.headers.Authorization = `Bearer ${response.data.token}`;
 
-    history.push(payload.prevPath);
+    payload.history.push(payload.prevPath);
   } catch (e) {
+    console.log(payload.location);
     toast.error('Usuário ou senha inválidos.');
 
     yield put(actions.loginFailure());
@@ -31,7 +31,7 @@ function persistRehydrate({ payload }) {
 
 // eslint-disable-next-line consistent-return
 function* registerRequest({ payload }) {
-  const { id, nome, email, password } = payload;
+  const { id, nome, email, password, history } = payload;
 
   try {
     if (id) {
@@ -63,7 +63,7 @@ function* registerRequest({ payload }) {
     }
 
     if (errors.length > 0) {
-      errors.map(error => toast.error(error));
+      errors.map((error) => toast.error(error));
     } else {
       toast.error('Erro desconhecido');
     }

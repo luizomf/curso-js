@@ -1,0 +1,26 @@
+# If you want to use MariaDB
+# Change the configs in file src/config/database.js
+version: "3"
+services: 
+  api_container:
+    container_name: api_container
+    hostname: api_container
+    image: mariadb
+    restart: always
+    command:
+      - --default-authentication-plugin=mysql_native_password
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+    volumes: 
+      # Change the ~/.MariaDBData/mariadb/api_container
+      # To your desired database path
+      - ~/.MariaDBData/mariadb/api_container:/var/lib/mysql
+    ports:
+      - 3306:3306
+      # - 27018:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: root # root password
+      MYSQL_DATABASE: api_database # database
+      # MYSQL_USER: root # database user
+      MYSQL_PASSWORD: root # database user password
+

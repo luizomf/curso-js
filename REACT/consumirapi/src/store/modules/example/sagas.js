@@ -4,7 +4,7 @@ import * as actions from './actions';
 import * as types from '../types';
 
 const requisicao = () =>
-  new Promise(resolve => {
+  new Promise((resolve) => {
     setTimeout(() => {
       resolve();
     }, 600);
