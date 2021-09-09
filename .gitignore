@@ -6,3 +6,4 @@ node_modules
 env
 venv
 testes
+.DS_Store
