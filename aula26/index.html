@@ -10,21 +10,53 @@
 </head>
 
 <body>
-
-  <section class="container">
-    <h1>Calcule seu IMC</h1>
-    <form action="/" id="formulario" method="POST">
-      <label for="peso">Peso</label>
-      <input type="text" id="peso" name="peso">
-      <label for="altura">Altura</label>
-      <input type="text" id="altura" name="altura">
-      <button type="submit">Enviar</button>
-    </form>
-
-    <div id="resultado"></div>
-  </section>
-
-  <script src="./assets/js/main.js"></script>
+ <section class="container">
+        <h1>Calcule seu IMC</h1>
+        <p id="info">Utilize ponto e não virgula para separção decimal</p>
+        <form action="/" id="formulario" method="POST">
+            <label for="peso">Peso</label>
+            <input type="text" id="peso">
+            <label for="altura">Altura</label>
+            <input type="text" id="altura">
+            <div id="resultado"></div>
+            <button type="submit">Enviar</button>
+        </form>
+        
+        <div>
+            <table>
+                <tr>
+                    <th>IMC</th>
+                    <th>Resultado</th>
+                </tr>
+                <tr>
+                    <td>Menos do que 18.5</td>
+                    <td>Abaixo do peso</td>
+                </tr>
+                <tr>
+                    <td>Entre 18.5 e 24.9</td>
+                    <td>Peso normal</td>
+                </tr>
+                <tr>
+                    <td>Entre 25 e 29.9</td>
+                    <td>Sobrepeso</td>
+                </tr>
+                <tr>
+                    <td>Entre 30 e 34.9</td>
+                    <td>Obesidade grau 1</td>
+                </tr>
+                <tr>
+                    <td>Entre 35 e 39.9</td>
+                    <td>Obesidade grau 2</td>
+                </tr>
+                <tr>
+                    <td>Mais que 40</td>
+                    <td>Obesidade grau 3</td>
+                </tr>
+            </table>
+        </div>
+        <tr></tr>
+    </section>
+    <script src="./assets/js/main.js"></script>
 </body>
 
 </html>
