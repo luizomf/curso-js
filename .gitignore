@@ -7,3 +7,4 @@ env
 venv
 testes
 .DS_Store
+.idea
